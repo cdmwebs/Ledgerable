@@ -1,0 +1,90 @@
+# src_dir
+#
+# Source directory path. Your src_files must be returned relative to this path. Will use root if left blank.
+# Default: project root
+#
+# EXAMPLE:
+#
+# src_dir: public
+#
+src_dir:
+
+# src_files
+#
+# Return an array of filepaths relative to src_dir to include before jasmine specs.
+# Default: []
+#
+# EXAMPLE:
+#
+# src_files:
+#   - lib/source1.js
+#   - lib/source2.js
+#   - dist/**/*.js
+#
+src_files:
+  - vendor/assets/javascripts/jquery.js
+  - vendor/assets/javascripts/jasmine.jquery.js
+  - vendor/assets/javascripts/jquery.scrollTo.min.js
+  - vendor/assets/javascripts/jquery.tipTip.min.js
+  - vendor/assets/javascripts/underscore.js
+  - vendor/assets/javascripts/backbone.js
+  - vendor/assets/javascripts/sugar.js
+  - app/assets/javascripts/application.js
+  - public/javascripts/compiled/helpers.js
+  - public/javascripts/compiled/ledgerable.js
+  - public/javascripts/compiled/entry_form.js
+  - public/javascripts/compiled/recurring_entry_form.js
+  - public/javascripts/compiled/ledger_form.js
+
+# stylesheets
+#
+# Return an array of stylesheet filepaths relative to src_dir to include before jasmine specs.
+# Default: []
+#
+# EXAMPLE:
+#
+# stylesheets:
+#   - css/style.css
+#   - stylesheets/*.css
+#
+stylesheets:
+  - stylesheets/**/*.css
+
+# helpers
+#
+# Return an array of filepaths relative to spec_dir to include before jasmine specs.
+# Default: ["helpers/**/*.js"]
+#
+# EXAMPLE:
+#
+# helpers:
+#   - helpers/**/*.js
+#
+helpers:
+  - helpers/**/*.js
+
+# spec_dir
+#
+# Spec directory path. Your spec_files must be returned relative to this path.
+# Default: spec/javascripts
+#
+# EXAMPLE:
+#
+# spec_dir: spec/javascripts
+#
+spec_dir: spec/javascripts/compiled
+
+# spec_files
+#
+# Return an array of filepaths relative to spec_dir to include.
+# Default: ["**/*[sS]pec.js"]
+#
+# EXAMPLE:
+#
+# spec_files:
+#   - **/*[sS]pec.js
+#
+spec_files:
+  - **/*[sS]pec.js
+
+

@@ -1,0 +1,682 @@
+@import compass/reset
+@import "compass/css3/gradient"
+@import "compass/css3/border-radius"
+@import "compass/css3/text-shadow"
+@import "compass/css3/box-shadow"
+@import "compass/utilities/general/clearfix"
+@import "sassy-buttons"
+
+$default-text-shadow-h-offset: 0px
+$default-text-shadow-v-offset: 1px
+$default-text-shadow-blur: 0px
+
+$copper: #D3643A
+$robin: #94C7B6
+$pale: #D5E1C7
+$brown: #3F3B33
+$white: #EDEBE6
+
+body
+  +clearfix
+  +linear_gradient(#414141, #717171)
+  :color #000
+  :font 13px/1.5 "Myriad Pro", "Corbel", "Lucida Grande", Verdana, sans-serif
+  :position relative
+  :background-color #414141
+  :background-repeat no-repeat
+
+h1
+  :font-size 2em
+
+a
+  :color $copper
+  :text-decoration none
+  :border 0
+
+p
+  :margin-bottom 1em
+
+h1, h2, h3, h4, h5, h6
+  :margin-bottom 1em
+
+h1
+  :font-size 218%
+  :letter-spacing -2px
+
+h2
+  :font-size 164%
+
+h3
+  :font-size 145%
+
+h4
+  :font-size 118%
+
+label
+  :color #000
+  :display inline-block
+  :margin-top 0.5em
+  :width 80px
+  :text-align right
+
+  &:after
+    :content ':'
+
+input[type=text], input[type=password]
+  :border 1px solid #DDD
+  :padding 5px
+  :width 200px
+
+  &:focus
+    outline: none
+
+input[type=submit], #buttons a, input[type=button], a.button, a.try_it, .buttons a, button
+  +border_radius(5px)
+  +single-text-shadow(lighten($brown, 10%))
+  +sassy-button("matte", 3px, 1em, #cede85, #a7bf35, #FFF, "inset")
+  :margin-top 2em
+  :text-transform uppercase
+  :cursor pointer
+
+button#cancel
+  +sassy-button("matte", 3px, 1em, #EC5C3A, #CC3512, #FFF, "inset")
+
+#buttons
+  text-align: center
+
+.container
+  :margin auto
+  :width 830px
+
+#header
+  :position relative
+  :padding 0
+  :height 80px
+
+  h1
+    +single-text-shadow(#000)
+    :font-size 3em
+    :font-weight bold
+    :text-transform uppercase
+    :letter-spacing -2px
+    :margin 0
+    :display inline-block
+    :color $pale
+
+  li
+    :display inline-block
+    :float right
+    :margin-top 1em
+    :margin-right 1em
+
+    a
+      :padding 0.3em 0.7em
+
+    &:last-child
+      :margin-right 0
+
+.small_area
+  :margin-bottom 3em
+
+.area
+  :margin-bottom 5em
+
+.clearfix
+  :clear both
+
+#main
+  :color #FFF
+
+  label
+    :color #FFF
+
+#ledger_header
+  :padding-bottom 3em
+  :text-transform uppercase
+
+  h2
+    :float left
+    :padding 0
+    :margin 0
+    :letter-spacing -1px
+
+  #small_overview_chart
+    :display inline-block
+    :margin-left 1em
+
+  #crud
+    :float right
+    :font-weight bold
+    :font-size 11px
+
+    #ledger_list_button
+      +single-text-shadow(darken(#30acc6, 10%))
+      :background #30acc6
+      :color $white
+
+    #delete
+      +single-text-shadow($brown)
+      :background $copper
+      :color $white
+
+    li
+      +border_radius(5px)
+      +single-text-shadow(#FFF)
+      +single-box-shadow(#444, 0, 2px, 2px, 0)
+      :font-size 11px
+      :display inline-block
+      :margin-right 0.2em
+      :padding 0 7px
+      :line-height 2em
+      :background $pale
+      :color lighten($brown, 5%)
+      :cursor pointer
+
+      &.disabled
+        :opacity 0.1
+
+        &:hover
+          cursor: default
+
+      &:hover
+        :background darken($pale, 5%)
+
+      &:active
+        :background darken($pale, 10%)
+
+      &:last-child
+        :margin-right 0
+
+
+#ledger
+  :color #000
+  :height 430px
+  :overflow auto
+  :background $white
+
+table.ledger
+  :width 100%
+  :font-size 11px
+  :border-collapse collapse
+
+  th
+    :font-weight bold
+    :text-transform uppercase
+    :text-align center
+    :font-size 1.2em
+    :color #FFF
+    :letter-spacing -1px
+
+  td
+    :padding 0.4em
+    :border 1px solid #DDD
+
+  tr
+
+    td
+      &:first-child
+        :border-left-width 0
+
+      &:last-child
+        :border-right-width 0
+
+  .entry
+    :color #000
+    :cursor pointer
+
+  .fade
+    :opacity 0.2
+
+  .cleared
+    :background #aad33a !important
+
+    &:hover
+      :background lighten(#aad33a, 15%) !important
+
+  .open
+    :background $white
+
+    &:hover
+      :background lighten($white, 3%)
+
+  .today
+    :background #F2CB46
+
+    .payee
+      +single-text-shadow(#FFF)
+
+    &:hover
+      :background lighten(#F2CB46, 15%)
+
+  .future
+    :opacity 0.2
+
+    &:hover
+      :background yellow
+
+  .negative_balance
+    :background #d33a3e
+    :color #FFF
+
+    &:hover
+      :color #FFF
+      :background lighten(#d33a3e, 15%)
+
+    .amount
+      :color #FFF
+
+.controls
+  +single-text-shadow(#FFF)
+  +linear_gradient(#DDD, #FFF)
+  +border_radius(6px)
+  +single-box-shadow(#AAA, 0, 2px, 2px, 0)
+  :text-transform uppercase
+  :color #8B8B8B
+  :font-weight bold
+  :padding 1em
+  :z-index 10
+
+  li
+    :cursor pointer
+
+    &:hover
+      :color darken(#8B8B8B, 20%)
+
+.nib
+  width: 0px
+  height: 0px
+  border-bottom: 5px solid transparent
+  border-top: 5px solid transparent
+  border-right: 5px solid #FDFDFD
+  font-size: 0px
+  line-height: 0px
+  position: absolute
+  top: 5px
+  left: -5px
+
+.date
+  :width 7%
+  :text-align center
+.category
+  :width 15%
+.payee
+  :width 43%
+  :font-weight bold
+  :text-transform uppercase
+.memo
+  :width 15%
+.amount
+  :width 10%
+.total
+  :width 10%
+
+.credit .amount
+  :font-weight bold
+
+.debit .amount
+  :color crimson
+
+th.category
+  :font-style normal
+
+td.total, td.amount
+  :font-family Courier
+  :text-align right
+
+td.memo
+  :font-style italic
+
+.ui-autocomplete
+  :width 300px
+
+p.chart
+  :text-align center
+  :margin-bottom 4em
+
+.alert, .notice
+  +border_radius(5px)
+  +single-text-shadow(#000)
+  :position absolute
+  :top 1em
+  :right 10px
+  :color #FFF
+  :padding 5px 10px
+  :font-weight bold
+  :text-transform uppercase
+
+.alert
+  :background #A91400
+
+.notice
+  :background #0B9000
+
+#ledger_footer
+  :margin-top 1em
+  :text-transform uppercase
+  :font-weight bold
+
+  li
+    :display inline-block
+    :margin-right 0.5em
+
+    &:last-child
+      :margin-right 0
+
+  a
+    :color #FFF
+
+  #key
+    :float left
+
+    .cleared
+      :color #BAD73A
+
+    .open
+      :color #FFF
+
+    .today
+      :color #F2CB46
+
+    .future
+      :opacity 0.2
+
+    .negative_balance
+      :color #982C27
+
+  #todays_value
+    :float right
+    :text-align right
+    :width 200px
+
+    .value
+      :display inline
+
+.auth_key
+  :font-family Courier
+  :font-size 1.2em
+
+#processing
+  :text-align center
+  :font-size 1.5em
+  :margin-top 5em
+
+  p
+    :margin-bottom 0.5em
+
+#footer
+  +border_radius(5px)
+  +single-text-shadow(#000)
+  :font-size 12px
+  :background darken(#364046, 5%)
+  :line-height 36px
+
+  a
+    :color #AAA
+
+    &:hover
+      :color #FFF
+
+  ul#links
+    :display inline-block
+
+    li
+      :display inline-block
+      :padding 0 0.5em
+      :line-height 12px
+      :border-right 1px solid #666
+
+      &:first-child
+        :padding-left 0
+
+      &:last-child
+        :border-right-width 0
+
+  #protected_method
+    :display inline-block
+    :text-align right
+
+    img
+      :vertical-align middle
+      :padding-right 0.5em
+
+.api
+  :margin 0 2em
+  :margin-bottom 2em
+
+  .title
+    :font-size 1.1em
+
+  .url
+    +border_radius(5px)
+    :font-family Courier
+    :background $pale
+    :color #000
+    :padding 5px 10px
+
+    p
+      :margin-bottom 0
+
+#landing
+
+  #quiken_sucks
+    :text-align center
+    :margin-top 3em
+    :margin-bottom 5em
+
+  #pitch
+    :font-size 2em
+    :margin-top 1.5em
+    :text-align center
+    :text-transform uppercase
+
+    a.try_it
+      :display inline-block
+      :margin-top 1.5em
+      :font-size 0.9em
+      :padding 3px 10px
+      :background #E19000
+
+      &:after
+        :content " →"
+
+  #blurb
+    :font-size 1.3em
+
+  ul#highlights
+    :margin-top 2em
+
+    li
+      :margin-bottom 1.5em
+      :padding-left 40px
+      :background-image url(/assets/megalomania.png)
+      :background-repeat no-repeat
+
+#errors
+  +border_radius(5px)
+  +single-text-shadow(darken(#A71700, 30%))
+  :padding 1em
+  :background #A71700
+  :color #FFF
+
+  li
+    :font-weight bold
+
+
+#title_block
+  h1
+    :margin-bottom 0.1em
+    :letter-spacing 0px
+
+  .buttons
+    :display block
+    :padding-bottom 2em
+
+    a
+      :font-size 0.9em
+      :padding 3px 7px
+
+ul#ledger_list
+  li
+    +border_radius(5px)
+    :font-size 1.4em
+    :background #2B3238
+    :padding 10px
+    :margin-bottom 1em
+
+    .value
+      :text-align right
+      :display inline-block
+
+#ledger_overview
+  +border_radius(5px)
+  :height 400px
+  :width 805px
+  :background darken(#364046, 5%)
+  :padding 1em
+
+  #spinner
+    :margin-top 150px
+    :text-align center
+
+#remove_account
+  p
+    :margin-bottom 0em
+
+  a
+    :display inline-block
+    :margin-top 1em
+
+#choices
+  a
+    :text-align right
+
+    &:before
+      :content "→ "
+
+.ledger_list, .recurring_entries_list, .search_box
+  +single-text-shadow(#FFF)
+  +linear_gradient(#DDD, #FFF)
+  +border_radius(6px)
+  +single-box-shadow(#AAA, 0, 2px, 2px, 0)
+  padding: 1em
+  z-index: 90
+  width: 230px
+
+  h3
+    line-height: 0.2em
+    margin-bottom: 1.5em
+    text-transform: uppercase
+    font-size: 1.3em
+    font-weight: bold
+
+  .nib
+    width: 0px
+    height: 0px
+    border-left: 5px solid transparent
+    border-right: 5px solid transparent
+    border-bottom: 5px solid #FFF
+    font-size: 0px
+    line-height: 0px
+    position: absolute
+    top: -10px
+    left: 5px
+
+  .plus
+    position: absolute
+    top: 10px
+    right: 10px
+    font-weight: bold
+    font-size: 1.75em
+    line-height: 0.8em
+    cursor: pointer
+    text-align: center
+
+
+.ledger_list
+  table
+    width: 100%
+
+    tbody
+      .name
+        cursor: pointer
+        font-weight: bold
+
+        &:after
+          content: ':'
+
+      .value
+        text-align: right
+
+    tfoot
+      border-top: 3px double #444
+
+      td
+        font-weight: bold
+        padding-top: 0.5em
+        text-align: right !important
+
+
+.recurring_entries_list
+  width: 250px
+  font-size: 11px
+  text-align: left
+
+  li
+    margin-bottom: 0.5em
+
+  .credit .value
+    color: green
+
+  .debit .value
+    color: crimson
+
+  strong
+    font-weight: bold
+    cursor: pointer
+
+.search_box
+  input
+    width: 218px
+    font-size: 12px
+
+  strong
+    font-weight: bold
+
+  #results, #count
+    text-align: right
+    font-size: 11px
+
+  #count
+    font-weight: bold
+
+#loading
+  +border-radius(0 0 0 6px)
+  +single-text-shadow(darken($copper, 10%))
+  +single-box-shadow(darken(#707070, 10%), 0, 2px, 2px, 0)
+  width: 100px
+  background: $copper
+  text-align: center
+  font-size: 11px
+  line-height: 2em
+  font-weight: bold
+  z-index: 20
+  position: absolute
+  top: 0
+  right: 0
+
+#cboxContent
+  h3
+    text-align: center
+
+#new_recurring_entry
+  +clearfix
+
+  .left
+    float: left
+    margin-right: 1em
+    width: 300px
+
+  .right
+    float: left
+    width: 300px
+

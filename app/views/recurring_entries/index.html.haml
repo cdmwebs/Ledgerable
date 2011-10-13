@@ -1,0 +1,10 @@
+.nib
+.plus +
+
+%h3 Recurring Entries
+
+%ul
+  - @ledger.recurring_entries.each do |r|
+    %li{ :id => r.id, :class => (r.amount > 0) ? 'credit' : 'debit' }
+      = colorized(r).html_safe
+

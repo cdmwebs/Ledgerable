@@ -1,0 +1,32 @@
+%h3 New Entry
+
+= form_for([@ledger, @entry]) do |f|
+  %p
+    = f.label :status
+    = f.select :status, EntryStatuses
+
+  %p
+    = f.label :date
+    = f.text_field :date, :value => Date.today.to_s, :autocomplete => "off"
+
+  %p
+    = f.label :payee
+    = f.text_field :payee, :autocomplete => "off"
+
+  %p
+    = f.label :memo
+    = f.text_field :memo, :autocomplete => "off"
+
+  %p
+    = f.label :amount
+    = f.text_field :amount, :autocomplete => "off"
+
+  %p
+    = f.label :category
+    = text_field_tag "entry[category]", nil, :size => 30, :autocomplete => "off"
+
+  %p#buttons
+    = f.submit "Save", :id => "save_button"
+
+:javascript
+  window.form = new EntryFormView({el: '#new_entry'})

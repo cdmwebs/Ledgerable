@@ -1,0 +1,59 @@
+<div id='errors' style='display:none;'>
+  <h3>Whoa there!</h3>
+  <p class='list'></p>
+</div>
+<form accept-charset="UTF-8" action="/ledgers/1/recurring_transactions" class="new_recurring_transaction" id="new_recurring_transaction" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="hXjjrUBpYGoQqTZZGybniz191VYquvNyHZQLeL5ZO6A=" /></div>
+  <div class='grid_5'>
+    <p>
+      <label for="recurring_transaction_start_date">Start date</label>
+      <input id="recurring_transaction_start_date" name="recurring_transaction[start_date]" size="30" type="text" value="2011-06-19" />
+    </p>
+    <p>
+      <label for="recurring_transaction_payee">Payee</label>
+      <input id="recurring_transaction_payee" name="recurring_transaction[payee]" size="30" type="text" />
+    </p>
+    <p>
+      <label for="recurring_transaction_memo">Memo</label>
+      <input id="recurring_transaction_memo" name="recurring_transaction[memo]" size="30" type="text" />
+    </p>
+    <p>
+      <label for="recurring_transaction_amount">Amount</label>
+      <input id="recurring_transaction_amount" name="recurring_transaction[amount]" size="30" type="text" />
+    </p>
+    <p>
+      <label for="recurring_transaction_category">Category</label>
+      <input id="category" name="category" size="30" type="text" />
+    </p>
+  </div>
+  <div class='grid_5'>
+    <div id='choices'>
+      <label for="recurring_transaction_Does this transaction recur:">Does this transaction recur:</label>
+      <p><a href="#" id="recurrs_monthly">the same day every month?</a></p>
+      <p><a href="#" id="recurrs_weekly">every n number of weeks?</a></p>
+    </div>
+    <div id='weekly' style='display:none;'>
+      <p>
+        <label for="recurring_transaction_Recur Style">Recur style</label>
+        <select id="recurring_transaction_period" name="recurring_transaction[period]"><option value="Bi-Weekly">Bi-Weekly</option>
+        <option value="Weekly">Weekly</option></select>
+      </p>
+    </div>
+    <div id='monthly' style='display:none;'>
+      <p>
+        <input id="recurring_transaction_period" name="recurring_transaction[period]" type="hidden" value="Monthly" />
+        <label for="recurring_transaction_On this day, every month">On this day, every month</label>
+        <input id="recurring_transaction_day_of_month" name="recurring_transaction[day_of_month]" size="30" type="text" value="19" />
+      </p>
+    </div>
+    <div id='times' style='display:none;'>
+      <p>
+        <label for="recurring_transaction_times">Times</label>
+        <input id="recurring_transaction_times" name="recurring_transaction[times]" size="30" type="text" />
+      </p>
+    </div>
+    <p>
+      <input id="save_button" name="commit" type="submit" value="Save" />
+    </p>
+  </div>
+</form>
+

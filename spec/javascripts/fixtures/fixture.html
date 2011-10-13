@@ -1,0 +1,45 @@
+<table class='ledger'>
+  <thead>
+    <tr>
+      <th class='date'>Date</th>
+      <th class='category'>Category</th>
+      <th class='payee'>Payee</th>
+      <th class='memo'>Memo</th>
+      <th class='amount'>Amount</th>
+      <th class='total'>Total</th>
+    </tr>
+  </thead>
+</table>
+<div id='ledger'>
+  <table class='ledger'>
+    <tbody></tbody>
+  </table>
+</div>
+<div id='ledger_footer'>
+  <div id='todays_value'>
+    Right Now →
+    <div class='value'></div>
+  </div>
+</div>
+
+<script id='entryTemplate' type='text/template'>
+  <td class='date'><%= entry.date %></td>
+  <td class='category'><%= entry.category %></td>
+  <td class='payee'><%= entry.payee %></td>
+  <td class='memo'><%= entry.memo %></td>
+  <td class='amount'><%= entry.amount %></td>
+  <td class='total'></td>
+</script>
+<script id='actionsTemplate' type='text/template'>
+  <td colspan='6'>
+    <ul>
+      <li>↑</li>
+      <li class='cleared'>Cleared</li>
+      <li class='open'>Open</li>
+      <li class='edit'>Edit</li>
+      <li class='remove'>Remove</li>
+      <li>↑</li>
+    </ul>
+  </td>
+</script>
+

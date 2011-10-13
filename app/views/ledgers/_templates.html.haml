@@ -1,0 +1,16 @@
+%script#entryTemplate{:type => "text/template"}
+  %td.date <%= entry.date %>
+  %td.category <%= entry.category %>
+  %td.payee <%= entry.payee %>
+  %td.memo <%= entry.memo %>
+  %td.amount <%= entry.amount %>
+  %td.total
+
+%script#controlsTemplate{:type => "text/template"}
+  %ul
+    %li.cleared Cleared
+    %li.open Open
+    %li.edit Edit
+    %li.remove Remove
+    %li.cancel Cancel
+

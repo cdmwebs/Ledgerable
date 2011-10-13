@@ -1,0 +1,31 @@
+= title @recurring_entry do
+  = link_to "Delete", ledger_recurring_entry_path(@ledger, @recurring_entry), :method => :delete, :confirm => "This will delete scheduled entries only.", :class => "button"
+
+%label Ledger
+= link_to @ledger, ledger_path(@ledger)
+
+%label Recurring Style
+= @recurring_entry
+
+%label Start Date
+= @recurring_entry.start_date
+
+%label Amount
+= number_to_currency(@recurring_entry.amount)
+
+%label Payee
+= @recurring_entry.payee
+
+%label Times
+= @recurring_entry.times
+
+%label Category
+= @recurring_entry.category.name
+
+%label Memo
+= @recurring_entry.memo
+
+%label Entry Dates
+%ul
+  - @recurring_entry.entries.each do |e|
+    %li= e.date.strftime("%A, %B %d, %Y")

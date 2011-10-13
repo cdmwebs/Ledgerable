@@ -1,0 +1,15 @@
+/* line 1, ../../app/assets/stylesheets/colorbox_layout.sass */
+body {
+  color: black;
+  background: white;
+}
+
+/* line 5, ../../app/assets/stylesheets/colorbox_layout.sass */
+label {
+  color: black;
+}
+
+/* line 9, ../../app/assets/stylesheets/colorbox_layout.sass */
+#terms li {
+  list-style: disc;
+}

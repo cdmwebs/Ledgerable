@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title LEDGERABLE
+    = csrf_meta_tag
+    = headers
+
+  %body
+    #header
+      .container
+        %a{:href => "/"}
+          %h1 Ledgerable
+
+    #main
+      .container
+        = yield

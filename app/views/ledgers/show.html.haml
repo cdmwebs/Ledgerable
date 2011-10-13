@@ -1,0 +1,51 @@
+#loading
+
+#ledger_header
+  %h2#ledger_name
+
+  %ul#crud
+    %li#ledger_list_button My Ledgers
+    %li#add_entry.disabled Add Entry
+    %li#recurring_entries.disabled Recurring Entries
+    %li#search.disabled Search
+    %li#graphs.disabled Graphs
+    %li#edit.disabled Edit
+    %li#delete.disabled Delete
+
+%table.ledger
+  %thead
+    %tr
+      %th.date Date
+      %th.category Category
+      %th.payee Payee
+      %th.memo Memo
+      %th.amount Amount
+      %th.total Total
+
+#ledger
+  %table.ledger
+    %tbody
+
+#ledger_footer.clearfix
+  %ul#key
+    %li.open Open
+    %li.cleared Cleared
+    %li.today Today
+    %li.future Future
+    %li.negative_balance Uh Oh
+
+  #todays_value
+    Right Now &rarr;
+    .value
+
+
+= render :partial => "templates"
+
+:javascript
+  $(document).ready(function(){
+    listenForShortcuts();
+    $(window).resize();
+    window.ledgers = new Ledgers(#{current_user.ledgers.to_json});
+    window.app = new App()
+  });
+

@@ -1,0 +1,13 @@
+%h3== Edit #{@ledger}
+
+= form_for(@ledger) do |f|
+  %p
+    = f.label :name
+    = f.text_field :name
+
+  %p#buttons
+    = f.submit "Save", :id => "save_button"
+
+
+:javascript
+  window.form = new LedgerFormView({el: '#edit_ledger'})

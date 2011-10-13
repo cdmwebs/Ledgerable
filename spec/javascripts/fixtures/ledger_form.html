@@ -1,0 +1,21 @@
+<div id='errors' style='display:none;'>
+  <h3>Whoa there!</h3>
+  <p class='list'></p>
+</div>
+<form accept-charset="UTF-8" action="/ledgers" class="new_ledger" enctype="multipart/form-data" id="new_ledger" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="hXjjrUBpYGoQqTZZGybniz191VYquvNyHZQLeL5ZO6A=" /></div>
+  <p>
+    <label for="ledger_name">Name</label>
+    <input id="ledger_name" name="ledger[name]" size="30" type="text" />
+  </p>
+  <p>
+    <label for="ledger_QIF File">Qif file</label>
+    <p>
+      Have a QIF file from your previous financial app?
+      Upload it here and we'll import it.
+    </p>
+    <input id="ledger_attachment" name="ledger[attachment]" type="file" />
+  </p>
+  <p>
+    <input id="save_button" name="commit" type="submit" value="Save" />
+  </p>
+</form>

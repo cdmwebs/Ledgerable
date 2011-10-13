@@ -1,0 +1,15 @@
+.nib
+.plus +
+
+%h3 My Ledgers
+
+%table
+  %tbody
+    - current_user.ledgers.each do |l|
+      %tr{:id => l.id}
+        %td.name= l.name
+        %td.value= number_to_currency l.todays_value
+  %tfoot
+    %tr
+      %td{:colspan => 2}= number_to_currency current_user.net_worth
+

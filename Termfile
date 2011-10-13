@@ -1,0 +1,23 @@
+tab do
+  run "ss"
+end
+
+tab do
+  run "sc"
+end
+
+tab do
+  run "guard"
+end
+
+tab do
+  run "rake jasmine"
+end
+
+tab do
+  run "spork"
+end
+
+tab do
+  run "gst"
+end

@@ -1,0 +1,746 @@
+@charset "UTF-8";
+/* line 24, ../../app/assets/stylesheets/ledgerable.sass */
+body {
+  color: black;
+  font: 13px/1.5 "Myriad Pro", "Corbel", "Lucida Grande", Verdana, sans-serif;
+  background: #364046 url(/assets/bg.jpg) top left repeat;
+  position: relative;
+}
+
+/* line 30, ../../app/assets/stylesheets/ledgerable.sass */
+h1 {
+  font-size: 2em;
+}
+
+/* line 33, ../../app/assets/stylesheets/ledgerable.sass */
+a {
+  color: #d3643a;
+  text-decoration: none;
+  border: 0;
+}
+
+/* line 38, ../../app/assets/stylesheets/ledgerable.sass */
+p {
+  margin-bottom: 1em;
+}
+
+/* line 41, ../../app/assets/stylesheets/ledgerable.sass */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1em;
+}
+
+/* line 44, ../../app/assets/stylesheets/ledgerable.sass */
+h1 {
+  font-size: 218%;
+  letter-spacing: -2px;
+}
+
+/* line 48, ../../app/assets/stylesheets/ledgerable.sass */
+h2 {
+  font-size: 164%;
+}
+
+/* line 51, ../../app/assets/stylesheets/ledgerable.sass */
+h3 {
+  font-size: 145%;
+}
+
+/* line 54, ../../app/assets/stylesheets/ledgerable.sass */
+h4 {
+  font-size: 118%;
+}
+
+/* line 57, ../../app/assets/stylesheets/ledgerable.sass */
+label {
+  color: black;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+  margin-top: 1.5em;
+  font-size: 1.3em;
+}
+
+/* line 65, ../../app/assets/stylesheets/ledgerable.sass */
+input[type=text], input[type=password] {
+  border: 1px solid #dddddd;
+  padding: 5px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* line 71, ../../app/assets/stylesheets/ledgerable.sass */
+input[type=submit], #buttons a, input[type=button], a.button, a.try_it, .buttons a {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 2em;
+  border: 0;
+  background: #94c7b6;
+  padding: 0px 10px;
+  color: white;
+  font-weight: bold;
+  line-height: 2em;
+  text-transform: uppercase;
+  text-shadow: #5b554a 0 1px 0;
+  cursor: pointer;
+}
+/* line 84, ../../app/assets/stylesheets/ledgerable.sass */
+input[type=submit]:hover, #buttons a:hover, input[type=button]:hover, a.button:hover, a.try_it:hover, .buttons a:hover {
+  background: #83beab;
+}
+/* line 87, ../../app/assets/stylesheets/ledgerable.sass */
+input[type=submit]:active, #buttons a:active, input[type=button]:active, a.button:active, a.try_it:active, .buttons a:active {
+  background: #73b59f;
+}
+
+/* ----------------------------------Sticky Footer-------------------------- */
+/* line 101, ../../app/assets/stylesheets/ledgerable.sass */
+html, body {
+  height: 100%;
+}
+
+/* line 104, ../../app/assets/stylesheets/ledgerable.sass */
+#wrap {
+  min-height: 100%;
+}
+
+/* line 107, ../../app/assets/stylesheets/ledgerable.sass */
+#main {
+  overflow: auto;
+  padding-bottom: 36px;
+}
+
+/* line 111, ../../app/assets/stylesheets/ledgerable.sass */
+#footer {
+  position: relative;
+  margin-top: -36px;
+  height: 36px;
+  clear: both;
+}
+
+/*Opera Fix */
+/* line 119, ../../app/assets/stylesheets/ledgerable.sass */
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* line 131, ../../app/assets/stylesheets/ledgerable.sass */
+#header {
+  position: relative;
+  padding: 0;
+}
+/* line 135, ../../app/assets/stylesheets/ledgerable.sass */
+#header h1 {
+  text-shadow: black 0 1px 0;
+  font-size: 6em;
+  text-transform: uppercase;
+  letter-spacing: -10px;
+  margin: 0;
+  color: #d3643a;
+  display: inline-block;
+}
+/* line 144, ../../app/assets/stylesheets/ledgerable.sass */
+#header h1:hover {
+  color: #c7572c;
+}
+
+/* line 147, ../../app/assets/stylesheets/ledgerable.sass */
+#buttons {
+  margin-top: 5em;
+  text-align: right;
+}
+/* line 151, ../../app/assets/stylesheets/ledgerable.sass */
+#buttons li {
+  display: inline-block;
+  margin-right: 0.3em;
+}
+/* line 155, ../../app/assets/stylesheets/ledgerable.sass */
+#buttons li a {
+  padding: 0.3em 0.7em;
+}
+/* line 158, ../../app/assets/stylesheets/ledgerable.sass */
+#buttons li:last-child {
+  margin-right: 0;
+}
+
+/* line 161, ../../app/assets/stylesheets/ledgerable.sass */
+.small_area {
+  margin-bottom: 3em;
+}
+
+/* line 164, ../../app/assets/stylesheets/ledgerable.sass */
+.area {
+  margin-bottom: 5em;
+}
+
+/* line 167, ../../app/assets/stylesheets/ledgerable.sass */
+.clearfix {
+  clear: both;
+}
+
+/* line 170, ../../app/assets/stylesheets/ledgerable.sass */
+#main {
+  color: white;
+}
+/* line 173, ../../app/assets/stylesheets/ledgerable.sass */
+#main label {
+  color: white;
+}
+
+/* line 176, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header {
+  padding-bottom: 1.5em;
+  text-transform: uppercase;
+}
+/* line 180, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header h2 {
+  float: left;
+  padding: 0;
+  margin: 0;
+  letter-spacing: -1px;
+}
+/* line 186, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header #small_overview_chart {
+  display: inline-block;
+  margin-left: 1em;
+}
+/* line 190, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header #crud {
+  float: right;
+  font-weight: bold;
+  font-size: 11px;
+  text-shadow: white 0 1px 0;
+}
+/* line 196, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header #crud a {
+  height: 100%;
+  width: 100%;
+  display: block;
+  color: #4d483e;
+}
+/* line 202, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header #crud li {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 0.2em;
+  padding: 0 7px;
+  line-height: 2em;
+  background: #d5e1c7;
+}
+/* line 210, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header #crud li:hover {
+  background: #c9d8b6;
+}
+/* line 213, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header #crud li:active {
+  background: #bccfa6;
+}
+/* line 216, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header #crud li:last-child {
+  margin-right: 0;
+  background: #d3643a;
+}
+/* line 220, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_header #crud li:last-child a {
+  color: #edebe6;
+  text-shadow: #3f3b33 0 1px 0;
+}
+
+/* line 225, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger {
+  color: black;
+  height: 430px;
+  overflow: auto;
+  background: #edebe6;
+}
+
+/* line 231, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger {
+  width: 100%;
+  font-size: 12px;
+  border-collapse: collapse;
+}
+/* line 236, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger th {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  letter-spacing: -1px;
+}
+/* line 244, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger td {
+  padding: 0.4em;
+  border: 1px solid #dddddd;
+}
+/* line 251, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger tr td:first-child {
+  border-left-width: 0;
+}
+/* line 254, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger tr td:last-child {
+  border-right-width: 0;
+}
+/* line 257, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions {
+  background: #eeeeee url(/assets/general_gradient_bg.png) top left repeat-x;
+  background-position-y: -1px;
+  text-transform: uppercase;
+  color: #8b8b8b;
+  text-shadow: white 0 1px 0;
+  font-weight: bold;
+}
+/* line 265, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions .cleared, table.ledger .actions .open {
+  background: none !important;
+}
+/* line 268, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions .cleared:hover, table.ledger .actions .open:hover {
+  background: none;
+}
+/* line 271, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions a {
+  color: #8b8b8b;
+}
+/* line 274, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions a:hover {
+  color: #585858;
+}
+/* line 277, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions ul {
+  text-align: center;
+}
+/* line 280, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions ul li {
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 284, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions ul li:after {
+  content: " — ";
+}
+/* line 288, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions ul li:first-child:after {
+  content: "";
+}
+/* line 292, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .actions ul li:nth-last-child(-n+2):after {
+  content: "";
+}
+/* line 297, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .entry:hover {
+  color: black;
+  cursor: pointer;
+}
+/* line 301, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .cleared {
+  background: #aad33a !important;
+}
+/* line 304, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .cleared:hover {
+  background: #c5e179;
+}
+/* line 307, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .open {
+  background: #edebe6;
+}
+/* line 310, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .open:hover {
+  background: #f3f2ef;
+}
+/* line 313, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .today {
+  background: #f2cb46;
+}
+/* line 316, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .today:hover {
+  background: #f7df8d;
+}
+/* line 319, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .future {
+  opacity: 0.2;
+}
+/* line 322, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .future:hover {
+  background: yellow;
+}
+/* line 325, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .negative_balance {
+  background: #d33a3e;
+  color: white;
+}
+/* line 329, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .negative_balance:hover {
+  color: white;
+  background: #e1797b;
+}
+/* line 333, ../../app/assets/stylesheets/ledgerable.sass */
+table.ledger .negative_balance .amount {
+  color: white;
+}
+
+/* line 336, ../../app/assets/stylesheets/ledgerable.sass */
+.date {
+  width: 5%;
+  text-align: center;
+}
+
+/* line 339, ../../app/assets/stylesheets/ledgerable.sass */
+.category {
+  width: 15%;
+}
+
+/* line 341, ../../app/assets/stylesheets/ledgerable.sass */
+.payee {
+  width: 45%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 345, ../../app/assets/stylesheets/ledgerable.sass */
+.memo {
+  width: 15%;
+}
+
+/* line 347, ../../app/assets/stylesheets/ledgerable.sass */
+.amount {
+  width: 10%;
+}
+
+/* line 349, ../../app/assets/stylesheets/ledgerable.sass */
+.total {
+  width: 10%;
+}
+
+/* line 352, ../../app/assets/stylesheets/ledgerable.sass */
+.credit .amount {
+  font-weight: bold;
+}
+
+/* line 355, ../../app/assets/stylesheets/ledgerable.sass */
+.debit .amount {
+  color: crimson;
+}
+
+/* line 358, ../../app/assets/stylesheets/ledgerable.sass */
+th.category {
+  font-style: normal;
+}
+
+/* line 361, ../../app/assets/stylesheets/ledgerable.sass */
+td.total, td.amount {
+  font-family: Courier;
+  text-align: right;
+}
+
+/* line 365, ../../app/assets/stylesheets/ledgerable.sass */
+td.memo {
+  font-style: italic;
+}
+
+/* line 368, ../../app/assets/stylesheets/ledgerable.sass */
+.ui-autocomplete {
+  width: 300px;
+}
+
+/* line 371, ../../app/assets/stylesheets/ledgerable.sass */
+p.chart {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+/* line 375, ../../app/assets/stylesheets/ledgerable.sass */
+.alert, .notice {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 1em;
+  right: 10px;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: black 0 1px 0;
+}
+
+/* line 386, ../../app/assets/stylesheets/ledgerable.sass */
+.alert {
+  background: #a91400;
+}
+
+/* line 389, ../../app/assets/stylesheets/ledgerable.sass */
+.notice {
+  background: #0b9000;
+}
+
+/* line 392, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer {
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 397, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer li {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+/* line 401, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer li:last-child {
+  margin-right: 0;
+}
+/* line 404, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer a {
+  color: white;
+}
+/* line 407, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer #key {
+  float: left;
+}
+/* line 410, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer #key .cleared {
+  color: #bad73a;
+}
+/* line 413, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer #key .open {
+  color: white;
+}
+/* line 416, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer #key .today {
+  color: #f2cb46;
+}
+/* line 419, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer #key .future {
+  opacity: 0.2;
+}
+/* line 422, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer #key .negative_balance {
+  color: #982c27;
+}
+/* line 425, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer #todays_value {
+  float: right;
+  text-align: right;
+  width: 200px;
+}
+/* line 430, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_footer #todays_value .value {
+  display: inline;
+}
+
+/* line 433, ../../app/assets/stylesheets/ledgerable.sass */
+.auth_key {
+  font-family: Courier;
+  font-size: 1.2em;
+}
+
+/* line 437, ../../app/assets/stylesheets/ledgerable.sass */
+#processing {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 5em;
+}
+/* line 442, ../../app/assets/stylesheets/ledgerable.sass */
+#processing p {
+  margin-bottom: 0.5em;
+}
+
+/* line 445, ../../app/assets/stylesheets/ledgerable.sass */
+#footer {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  background: #2b3338;
+  line-height: 36px;
+  text-shadow: black 0 1px 0;
+}
+/* line 452, ../../app/assets/stylesheets/ledgerable.sass */
+#footer a {
+  color: #aaaaaa;
+}
+/* line 455, ../../app/assets/stylesheets/ledgerable.sass */
+#footer a:hover {
+  color: white;
+}
+/* line 458, ../../app/assets/stylesheets/ledgerable.sass */
+#footer ul#links {
+  display: inline-block;
+}
+/* line 461, ../../app/assets/stylesheets/ledgerable.sass */
+#footer ul#links li {
+  display: inline-block;
+  padding: 0 0.5em;
+  line-height: 12px;
+  border-right: 1px solid #666666;
+}
+/* line 467, ../../app/assets/stylesheets/ledgerable.sass */
+#footer ul#links li:first-child {
+  padding-left: 0;
+}
+/* line 470, ../../app/assets/stylesheets/ledgerable.sass */
+#footer ul#links li:last-child {
+  border-right-width: 0;
+}
+/* line 473, ../../app/assets/stylesheets/ledgerable.sass */
+#footer #protected_method {
+  display: inline-block;
+  text-align: right;
+}
+/* line 477, ../../app/assets/stylesheets/ledgerable.sass */
+#footer #protected_method img {
+  vertical-align: middle;
+  padding-right: 0.5em;
+}
+
+/* line 481, ../../app/assets/stylesheets/ledgerable.sass */
+.api {
+  margin: 0 2em;
+  margin-bottom: 2em;
+}
+/* line 485, ../../app/assets/stylesheets/ledgerable.sass */
+.api .title {
+  font-size: 1.1em;
+}
+/* line 488, ../../app/assets/stylesheets/ledgerable.sass */
+.api .url {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: Courier;
+  background: #d5e1c7;
+  color: black;
+  padding: 5px 10px;
+}
+/* line 495, ../../app/assets/stylesheets/ledgerable.sass */
+.api .url p {
+  margin-bottom: 0;
+}
+
+/* line 500, ../../app/assets/stylesheets/ledgerable.sass */
+#landing #quiken_sucks {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 5em;
+}
+/* line 505, ../../app/assets/stylesheets/ledgerable.sass */
+#landing #pitch {
+  font-size: 2em;
+  margin-top: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 511, ../../app/assets/stylesheets/ledgerable.sass */
+#landing #pitch a.try_it {
+  display: inline-block;
+  margin-top: 1.5em;
+  font-size: 0.9em;
+  padding: 3px 10px;
+  background: #e19000;
+}
+/* line 518, ../../app/assets/stylesheets/ledgerable.sass */
+#landing #pitch a.try_it:after {
+  content: " →";
+}
+/* line 521, ../../app/assets/stylesheets/ledgerable.sass */
+#landing #blurb {
+  font-size: 1.3em;
+}
+/* line 524, ../../app/assets/stylesheets/ledgerable.sass */
+#landing ul#highlights {
+  margin-top: 2em;
+}
+/* line 527, ../../app/assets/stylesheets/ledgerable.sass */
+#landing ul#highlights li {
+  margin-bottom: 1.5em;
+  padding-left: 40px;
+  background-image: url(/assets/megalomania.png);
+  background-repeat: no-repeat;
+}
+
+/* line 533, ../../app/assets/stylesheets/ledgerable.sass */
+#errors {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 1em;
+  background: #a71700;
+  color: white;
+  text-shadow: #0e0200 0 1px 0;
+}
+/* line 540, ../../app/assets/stylesheets/ledgerable.sass */
+#errors li {
+  font-weight: bold;
+}
+
+/* line 546, ../../app/assets/stylesheets/ledgerable.sass */
+#title_block h1 {
+  margin-bottom: 0.1em;
+  letter-spacing: 0px;
+}
+/* line 550, ../../app/assets/stylesheets/ledgerable.sass */
+#title_block .buttons {
+  display: block;
+  padding-bottom: 2em;
+}
+/* line 554, ../../app/assets/stylesheets/ledgerable.sass */
+#title_block .buttons a {
+  font-size: 0.9em;
+  padding: 3px 7px;
+}
+
+/* line 559, ../../app/assets/stylesheets/ledgerable.sass */
+ul#ledger_list li {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 1.4em;
+  background: #2b3238;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+/* line 566, ../../app/assets/stylesheets/ledgerable.sass */
+ul#ledger_list li .value {
+  text-align: right;
+  display: inline-block;
+}
+
+/* line 570, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_overview {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 400px;
+  width: 916px;
+  background: #2b3338;
+  padding: 1em;
+}
+/* line 577, ../../app/assets/stylesheets/ledgerable.sass */
+#ledger_overview #spinner {
+  margin-top: 150px;
+  text-align: center;
+}
+
+/* line 582, ../../app/assets/stylesheets/ledgerable.sass */
+#remove_account p {
+  margin-bottom: 0em;
+}
+/* line 585, ../../app/assets/stylesheets/ledgerable.sass */
+#remove_account a {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+/* line 590, ../../app/assets/stylesheets/ledgerable.sass */
+#choices a {
+  font-weight: bold;
+  text-align: right;
+}

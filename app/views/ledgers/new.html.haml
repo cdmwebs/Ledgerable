@@ -1,0 +1,14 @@
+%h3 Add Ledger
+
+= form_for(@ledger, :html => { :multipart => true }) do |f|
+  %p
+    = f.label :name
+    = f.text_field :name
+    = f.hidden_field :user_id, :value => current_user.id
+
+  %p#buttons
+    = f.submit "Save", :id => "save_button"
+
+
+:javascript
+  window.form = new LedgerFormView({el: '#new_ledger'})

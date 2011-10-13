@@ -1,0 +1,32 @@
+%h3 Edit Entry
+
+= form_for([@ledger, @entry]) do |f|
+  %p
+    = f.label :status
+    = f.select :status, EntryStatuses
+
+  %p
+    = f.label :date
+    = f.text_field :date
+
+  %p
+    = f.label :payee
+    = f.text_field :payee
+
+  %p
+    = f.label :memo
+    = f.text_field :memo
+
+  %p
+    = f.label :amount
+    = f.text_field :amount
+
+  %p
+    = f.label :category
+    = text_field_tag "entry[category]", @entry.category.name, :size => 30
+
+  %p#buttons
+    = f.submit "Save", :id => "save_button"
+
+:javascript
+  window.form = new EntryFormView({el: '#edit_entry'})

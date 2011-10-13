@@ -1,0 +1,32 @@
+<div id='errors' style='display:none;'>
+  <h3>Whoa there!</h3>
+  <p class='list'></p>
+</div>
+
+<form accept-charset="UTF-8" action="/ledgers/1/entries" class="new_entry" id="new_entry" method="post">
+  <div class='grid_5'>
+    <p>
+      <label for="entry_date">Date</label>
+      <input id="entry_date" name="entry[date]" size="30" type="text" value="2011-06-19" />
+    </p>
+    <p>
+      <label for="entry_payee">Payee</label>
+      <input id="entry_payee" name="entry[payee]" size="30" type="text" />
+    </p>
+    <p>
+      <label for="entry_memo">Memo</label>
+      <input id="entry_memo" name="entry[memo]" size="30" type="text" />
+    </p>
+    <p>
+      <label for="entry_amount">Amount</label>
+      <input id="entry_amount" name="entry[amount]" size="30" type="text" />
+    </p>
+    <p>
+      <label for="entry_category">Category</label>
+      <input id="entry_category" name="entry[category]" size="30" type="text" />
+    </p>
+    <p>
+      <input id="save_button" name="commit" type="submit" value="Save" />
+    </p>
+  </div>
+</form>

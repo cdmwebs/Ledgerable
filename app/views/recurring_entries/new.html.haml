@@ -1,0 +1,52 @@
+%h3 New Recurring Entry
+
+= form_for([@ledger, @recurring_entry]) do |f|
+  .left
+    %p
+      = f.label :start_date
+      = f.text_field :start_date, :value => Date.today.to_s, :autocomplete => false
+
+    %p
+      = f.label :payee
+      = f.text_field :payee, :autocomplete => false
+
+    %p
+      = f.label :memo
+      = f.text_field :memo, :autocomplete => false
+
+    %p
+      = f.label :amount
+      = f.text_field :amount, :autocomplete => false
+
+    %p
+      = f.label :category
+      = text_field_tag :category, nil, :size => 30, :autocomplete => false
+
+  .right
+    #choices
+      %h4 Does this entry recur
+
+      %p= link_to "The same day every month?", "#", :id => "recurrs_monthly"
+      %p= link_to "Every n number of weeks?", "#", :id => "recurrs_weekly"
+
+    #weekly{ :style => "display:none;" }
+      %p
+        = f.label "Recur Style"
+        = f.select :period, WeeklyRecurringPeriods
+
+    #monthly{ :style => "display:none;" }
+      %p
+        = f.hidden_field :period, :value => "Monthly"
+        = f.label "On this day"
+        = f.text_field :day_of_month, :value => Date.today.day.to_s
+
+    #times{ :style => "display:none;" }
+      %p
+        = f.label :times
+        = f.text_field :times, :size => 30
+
+  %p#buttons
+    = f.submit "Save", :id => "save_button"
+
+:javascript
+  window.form = new RecurringEntryFormView({el: '#new_recurring_entry'})
